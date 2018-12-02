@@ -57,4 +57,27 @@
 
 .buy-container {
     float: right;
+    display: inline-block;
+}
+
+.description-container {
+    border: 3px solid teal;
+    display: flex;
+}
+
+.description {
+    padding-right: 5px;
+}
+
+.reviews {
+    border: 3px solid teal;
+}
+
+.review-header {
+    display: inline-flex;
+}
+
+.date {
+    position: absolute;
+    right: 15px;
 }

@@ -1,0 +1,27 @@
+{
+    "coffee-table":  {
+    [
+        {
+            "name": "Bob Jones",
+            "review": "This table is one of the best coffee tables I have ever spent my money on! It looks nice in my living room and my cat loves the lower shelf to hide on."
+        },
+        {
+            "name": "Darth Vader",
+            "review": "This coffee table looks perfect for the next iteration of the Death Star!"
+        },
+        {
+            "name": "Brittish Guy",
+            "review": "This coffee table also makes for a great tea table as well, all my friends love it"
+        }
+    ]
+    },
+    
+    "mosiac-table": {
+    [
+        {
+            "name" : "Garden Gnome",
+            "review": "Best buy that the owner ever made, the garden looks amazing with it and I have new perch"
+        }
+    ]
+    }
+}
