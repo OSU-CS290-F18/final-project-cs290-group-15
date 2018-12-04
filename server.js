@@ -25,7 +25,7 @@ app.get('/', function (req, res, next) {
 
 app.get('/product/:n', function (req, res, next) {
     if (tableData[req.params.n]) {
-        res.status(200).render('z', [tableData[req.params.n], reviewData[req.params.n]]); // z is the template for a single listing.
+        res.status(200).render('./partials/tablePhoto', [tableData[req.params.n], reviewData[req.params.n]]); // z is the template for a single listing.
     } else {
         next();
     }
