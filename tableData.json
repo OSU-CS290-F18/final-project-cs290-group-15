@@ -1,37 +1,36 @@
 {
    "woodcoffee": {
-   [
-      {
+       "photos" : [
+           {
          "photoURL": "./public/WoodCoffeeTable1.jpg"
-      }
-   ]
+           }
+        ]
    },
 
    "glasscoffee": {
-   [
-      {
-         "photoURL": "./public/glassCoffeeTable1.jpg"
-      },
-   
-      {
-       	 "photoURL": "./public/glassCoffeeTable2.jpg"
-      }
-   ]
+       "photos" : [
+         { 
+             "photoURL": "./public/glassCoffeeTable1.jpg"
+         },
+         {
+       	    "photoURL": "./public/glassCoffeeTable2.jpg"
+         }
+       ]
    },
 
    "dining": {
-   [
-      {
-         "photoURL": "./public/WoodDiningTable1.jpg"
-      }
-   ]
+       "photos" : [
+           {
+         "photoURL": "./public/WoodDiningTable1.jpg"   
+           }
+           ]
    },
 
    "outdoor": {
-   [
-      {
+       "photos" : [
+           {
          "photoURL": "./public/outdoorMosiacTable.jpg"
-      }
-   ]
+           }
+           ]
    }
 }

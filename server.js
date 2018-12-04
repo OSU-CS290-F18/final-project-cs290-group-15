@@ -6,9 +6,12 @@
 var path = require('path');
 var express = require('express');
 var exphbs = require('express-handlebars');
+
 var tableData = require('./tableData');
 var reviewData = require('./reviewData');
+
 var app = express();
+
 var port = process.env.PORT || 3034;
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
@@ -20,7 +23,7 @@ app.get('/', function (req, res, next) {
    res.status(200).render('homePage', tableData);
 });
 
-app.get('/y/:n', function (req, res, next) {
+app.get('/product/:n', function (req, res, next) {
     if (tableData[req.params.n]) {
         res.status(200).render('z', [tableData[req.params.n], reviewData[req.params.n]]); // z is the template for a single listing.
     } else {

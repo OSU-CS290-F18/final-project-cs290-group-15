@@ -1,6 +1,6 @@
 {
     "coffee-table":  {
-    [
+        "reviews" : [
         {
             "name": "Bob Jones",
             "review": "This table is one of the best coffee tables I have ever spent my money on! It looks nice in my living room and my cat loves the lower shelf to hide on."
@@ -17,7 +17,7 @@
     },
     
     "mosiac-table": {
-    [
+        "reviews" : [
         {
             "name" : "Garden Gnome",
             "review": "Best buy that the owner ever made, the garden looks amazing with it and I have new perch"
