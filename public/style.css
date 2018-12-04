@@ -126,9 +126,13 @@
 .image-container {
 }
 
-.buy-container {
+#buy-container {
     float: right;
     display: inline-block;
+}
+
+.hidden {
+	display: none;
 }
 
 .description-container {
@@ -152,3 +156,4 @@
     position: absolute;
     right: 15px;
 }
+
