@@ -31,8 +31,8 @@
                     <img class="product-picture" src="./glassCoffeeTable2.jpg">
                 </div><!--Until I can find a decent picture, potentially multiple pictures.-->
                 <div class="buy-container">
-                    <button class="buy-button">Buy</button>
-                    <div class="buy-modal">
+                    <button type="button">Buy</button>
+                    <div class="buy-modal" class="hidden">
                         <div class="buy-name-container">
                             <label for="buyer-name" class="buy-input-field">Name</label>
                             <input type="text" name="buyer-name" class="buyer-input">
@@ -54,11 +54,9 @@
             <div class="review-container">
                 <h3>Reviews</h3>
                 <button class="review-button">Make Review</button>
-                <div class="new-review">
+                <div class="new-review" class="hidden">
                     <label for="name">Name:</label>
                     <input type="text" name="name" class="name-input">
-                </div>
-                <div>
                     <label for="review">Review</label>
                     <input type="text" name="review" class="review-input">
                 </div>
@@ -73,5 +71,6 @@
                 </div>
             </div>
         </main>
+	
     </body>
 </html>
