@@ -124,6 +124,18 @@
 }
 
 .image-container {
+   background: lightgray;
+   text-align: center;
+   border: 1px solid black;
+   padding 25px;
+}
+
+.product-picture {
+   max-height: 400px;
+   max-width: 600px;
+   margin: 10px;
+   padding: 10px;
+   border: 2px solid black;
 }
 
 #buy-container {
