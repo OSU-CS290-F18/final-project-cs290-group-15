@@ -1,5 +1,6 @@
 {
    "woodcoffee": {
+       "description": "This wonderful wooden coffee table will look go in any room, it's double layered for extra storage space for all your remotes and shoes.",
        "photos" : [
            {
          "photoURL": "./public/WoodCoffeeTable1.jpg"
@@ -8,6 +9,7 @@
    },
 
    "glasscoffee": {
+       "description": "This coffee table looks good in any room, the living room, the family room, or even a game room.  It comes with two layers for extra space to store things like the remotes or display decorational pieces.",
        "photos" : [
          { 
              "photoURL": "./public/glassCoffeeTable1.jpg"
@@ -19,6 +21,7 @@
    },
 
    "dining": {
+       "description": "This beautiful wooden dining table will compliment any dining room, perfect for providing a welcoming atmosphere for family meals. (Warning: Chairs are not sold here!)",
        "photos" : [
            {
          "photoURL": "./public/WoodDiningTable1.jpg"   
@@ -27,6 +30,7 @@
    },
 
    "outdoor": {
+       "description": "This outdoor table has been hand crafted to be functional as well as decorational.  It will look amazing by your lawn, on your deck, in the garden or wherever you choose to place it.",
        "photos" : [
            {
          "photoURL": "./public/outdoorMosiacTable.jpg"

@@ -5,6 +5,6 @@ templates['tablePhoto'] = template({"compiler":[7,">= 4.0.0"],"main":function(co
 
   return "<img class=\"product-picture\" src=\""
     + container.escapeExpression(((helper = (helper = helpers.photoURL || (depth0 != null ? depth0.photoURL : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"photoURL","hash":{},"data":data}) : helper)))
-    + "\">\r\n";
+    + "\">\n";
 },"useData":true});
 })();
