@@ -10,16 +10,24 @@
     margin: 0;
 }
 
+.title-bar {
+   background: darkred;
+   color: beige;
+}
+
 /* I got the basic of how to make this from W3 schools, but don't know if we should use a lot of their code, idk*/
 .nav-site {
     overflow: hidden;
+    background: #333;
 }
 
 .nav-site a {
     float: left;
     text-align: center;
     text-decoration: none;
-    background-color: red; /* just to make it easier to see for now */
+    font-size: 25px;
+    padding: 5px 16px;
+    color: white;
 }
 
 .productDropdown {
@@ -30,17 +38,37 @@
 .productDropdown .productsButton {
     border: none;
     outline: none;
+    font-size: 25px;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    padding: 5px 16px;
 }
 
+.nav-site a:hover, .productDropdown:hover .productsButton {
+   background: red;
+}
 
 .products {
     display: none;
     position: absolute;
+    background: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 .products a {
     float: none;
     display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: left;
+}
+
+.products a:hover {
+   background-color: #ddd;
 }
 
 .productDropdown:hover .products {
