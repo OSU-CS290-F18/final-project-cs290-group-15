@@ -75,6 +75,10 @@
     display: block;
 }
 
+.content-container {
+   text-align: center;
+}
+
 .mainpage-title {
     text-align: center;
     font-size: 30px
