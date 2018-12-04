@@ -1,0 +1,37 @@
+{
+   "woodcoffee": {
+   [
+      {
+         "photoURL": "./public/WoodCoffeeTable1.jpg"
+      }
+   ]
+   },
+
+   "glasscoffee": {
+   [
+      {
+         "photoURL": "./public/glassCoffeeTable1.jpg"
+      },
+   
+      {
+       	 "photoURL": "./public/glassCoffeeTable2.jpg"
+      }
+   ]
+   },
+
+   "dining": {
+   [
+      {
+         "photoURL": "./public/WoodDiningTable1.jpg"
+      }
+   ]
+   },
+
+   "outdoor": {
+   [
+      {
+         "photoURL": "./public/outdoorMosiacTable.jpg"
+      }
+   ]
+   }
+}
