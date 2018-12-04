@@ -5,9 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
     "start": "node server.js",
     "build": "handlebars ./views/partials/tablePhoto.handlebars -f ./public/tablePhotoTemplate.js",
-    "prestart": "npm run build"
+    "prestart": "npm run build",
+    "predev": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,8 @@
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
   }
 }

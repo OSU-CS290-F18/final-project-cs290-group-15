@@ -1,40 +1,76 @@
 {
    "woodcoffee": {
-       "description": "This wonderful wooden coffee table will look go in any room, it's double layered for extra storage space for all your remotes and shoes.",
+       "name" : "Wood Coffee Table",
+       "description": "This wooden coffee table looks good in any room, the living room, the family room or even a game room. It comes with two layers for extra space to store things like the remotes or display decorational pieces.",
        "photos" : [
            {
-         "photoURL": "./public/WoodCoffeeTable1.jpg"
+         "photoURL": "/WoodCoffeeTable1.jpg"
            }
-        ]
-   },
-
-   "glasscoffee": {
-       "description": "This coffee table looks good in any room, the living room, the family room, or even a game room.  It comes with two layers for extra space to store things like the remotes or display decorational pieces.",
-       "photos" : [
-         { 
-             "photoURL": "./public/glassCoffeeTable1.jpg"
-         },
-         {
-       	    "photoURL": "./public/glassCoffeeTable2.jpg"
-         }
+        ],
+       "reviews" : [
+           {
+               "reviewName" : "Billy Mays",
+               "review" : "Have you always wanted a coffee table that looks great and won't be forgotten about under your pile of stuff?! Then this is the table for you!"
+           }
        ]
    },
 
+   "glasscoffee": {
+       "name" : "Glass Coffee Table",
+       "description": "This coffee table looks good in any room, the living room, the family room or even a game room. It comes with two layers for extra space to store things like the remotes or display decorational pieces.",
+       "photos" : [
+         { 
+             "photoURL": "/glassCoffeeTable1.jpg"
+         },
+         {
+       	    "photoURL": "/glassCoffeeTable2.jpg"
+         }
+       ],
+       "reviews" : [
+        {
+            "reviewName": "Bob Jones",
+            "review": "This table is one of the best coffee tables I have ever spent my money on! It looks nice in my living room and my cat loves the lower shelf to hide on."
+        },
+        {
+            "reviewName": "Darth Vader",
+            "review": "This coffee table looks perfect for the next iteration of the Death Star!"
+        },
+        {
+            "reviewName": "Brittish Guy",
+            "review": "This coffee table also makes for a great tea table as well, all my friends love it"
+        }
+    ]
+   },
+
    "dining": {
-       "description": "This beautiful wooden dining table will compliment any dining room, perfect for providing a welcoming atmosphere for family meals. (Warning: Chairs are not sold here!)",
+       "name" : "Wooden Dining Table",
+       "description" : "This beautiful wooden dining table is perfect for any home and provides a warm welcoming setting to have family meals.",
        "photos" : [
            {
-         "photoURL": "./public/WoodDiningTable1.jpg"   
+            "photoURL": "/WoodDiningTable1.jpg"   
            }
-           ]
+           ],
+       "reviews" : [
+           {
+               "reviewName" : "ILOVETABLES",
+               "review" : "THIS IS THE BEST TABLE EVER!!!!!!!!!!!"
+           }
+       ]
    },
 
    "outdoor": {
-       "description": "This outdoor table has been hand crafted to be functional as well as decorational.  It will look amazing by your lawn, on your deck, in the garden or wherever you choose to place it.",
+       "name" : "Outdoor Mosiac Table",
+       "description" : "This outdoor table has been hand crafted to be functional as well as decorational. It will look amazing by your lawn, on your deck, in the garden or wherever you choose to place it.",
        "photos" : [
            {
-         "photoURL": "./public/outdoorMosiacTable.jpg"
+        "photoURL": "/outdoorMosiacTable.jpg"
            }
-           ]
+           ],
+       "reviews" : [
+        {
+            "reviewName" : "Garden Gnome",
+            "review": "Best buy that the owner ever made, the garden looks amazing with it and I have new perch"
+        }
+    ]
    }
 }

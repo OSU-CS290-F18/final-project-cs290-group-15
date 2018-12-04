@@ -8,7 +8,6 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 
 var tableData = require('./tableData');
-var reviewData = require('./reviewData');
 
 var app = express();
 
@@ -20,13 +19,18 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
 app.get('/', function (req, res, next) {
-   res.status(200).render('homePage', tableData);
+   res.status(200).render('homePage');
 });
 
-app.get('/product/:n', function (req, res, next) {
-    if (tableData[req.params.n]) {
-        res.status(200).render('./partials/tablePhoto', [tableData[req.params.n], reviewData[req.params.n]]); // z is the template for a single listing.
-    } else {
+app.get('/products/:product', function (req, res, next) {
+    var product = req.params.product.toLowerCase();
+    if (tableData[product]){
+        res.status(200).render('productPage', tableData[product]);
+    }
+//    if (tableData[req.params.n]) {
+//        res.status(200).render('./partials/tablePhoto', [tableData[req.params.n], reviewData[req.params.n]]); // z is the template for a single listing.
+//    } 
+    else {
         next();
     }
 });
