@@ -153,6 +153,8 @@
    padding-left: 15px;
    padding-right: 15px;
    background: lightgray;
+   border: 2px solid black;
+   border-radius: 3px;
 }
 
 .buy-name-container {
@@ -167,7 +169,7 @@
 
 .quantity-container {
    margin-bottom: 5px;
-   margin-right: 50px;
+   margin-right: 66px;
 }
 
 .hidden {
@@ -175,8 +177,10 @@
 }
 
 .description-container {
-    border: 3px solid teal;
-    display: flex;
+    border: 1px solid black;
+    //display: flex;
+    background: lightgray;
+    text-align: center;
 }
 
 .description {
