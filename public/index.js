@@ -19,6 +19,15 @@ function handleTotalCalc() {
     document.querySelector('.total').textContent = total;
 }
 
+function handleBuyConfirmClick() {
+    if (!(buyName.value === "")) {
+        alert("Congratulations! Your account has been charged and our state-of-the-art table delivery drones are en-route to your location.")
+    }
+    else {
+        alert("You must enter a name to purchase.");
+    }
+}
+
 function handleReviewSubmitClick() {
     var reviewName = document.getElementsByClassName('name-input').value.trim();
     var review = document.getElementsByClassName('review-input').value.trim();
@@ -91,12 +100,19 @@ function createReview() {
 
 var buyButton = document.querySelector('.buy-button');
 buyButton.addEventListener('click', handleBuyButtonClick);
+
 var quantityField = document.getElementById('quantity-input');
 quantityField.addEventListener('change', handleTotalCalc);
+
+var confirmButton = document.querySelector('.buy-confirm-button');
+confirmButton.addEventListener('click', handleBuyConfirmClick);
+
 var reviewButton = document.querySelector('.review-button');
 reviewButton.addEventListener('click', makeReview);
+
 var submitButton = document.querySelector('.review-submit-button');
 submitButton.addEventListener('click', handleReviewSubmitClick);
+
 var xButtons = document.querySelectorAll('.modal-x-button');
 for (var i = 0; i < xButtons.length; i++) {
     xButtons[i].addEventListener('click', xButtonClick);

@@ -231,7 +231,7 @@
    cursor: pointer;
 }
 
-.review-submit-button {
+.review-submit-button, .buy-confirm-button {
    margin-bottom: 10px;
    padding: 5px;
    font-size: 15px;
