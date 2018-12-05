@@ -1,18 +1,24 @@
 var reviewName = document.querySelector('.name-input');
 var review = document.querySelector('.review-input');
 var modal = document.querySelector('.reviewModal');
+var buyModal = document.getElementById('buy-modal');
+var pricePer = parseFloat(document.querySelector('.total').textContent);
 
-function getProductFromURL() {
-  var path = window.location.pathname;
-  var pathParts = path.split('/');
-  if (pathParts[1] === "products") {
-    return pathParts[2];
-  } else {
-    return null;
-  }
+function handleBuyButtonClick() {
+    buyModal.classList.toggle("hidden");
+}
+
+function handleTotalCalc() {
+    total = pricePer;
+    console.log(total);
+    total = total * (document.getElementById('quantity-input').value || 1);
+    console.log(total);
+    document.querySelector('.total').textContent = total;
 }
 
 function handleReviewSubmitClick() {
+    var reviewName = document.getElementsByClassName('name-input').value.trim();
+    var review = document.getElementsByClassName('review-input').value.trim();
     
 	if(!reviewName.value === ""){
 		alert("Empty name!");
@@ -26,24 +32,8 @@ function handleReviewSubmitClick() {
        console.log("All fields filled");
        createReview();
        return true;
-        var postRequest = new XMLHttpRequest();
-        var requestURL = '/products/' + getProductFromURL() + '/addReview';
-        postRequest.open('POST', requestURL);
-        
-        var requestBody = JSON.stringify({
-            reviewName: reviewName,
-            review: review
-        });
-        
-        postRequest.addEventListener('load', function(event) {
-            if (event.target.status === 200) {
-                var reviewTemplate = Handlebars.templates.Reviews;
-                var 
-            }
-        
-            var reviewContainer = document.querySelector('.review-container');
-            reviewContainer.insertAdjacentHTML('beforeend', );
-        });
+        //var postRequest = new XMLHttpRequest();
+        //var requestURL = '/products/' '/addReview';
     }
     
 }
@@ -88,6 +78,10 @@ function createReview() {
 	//clearReview();
 }
 
+var buyButton = document.querySelector('.buy-button');
+buyButton.addEventListener('click', handleBuyButtonClick);
+var quantityField = document.getElementById('quantity-input');
+quantityField.addEventListener('change', handleTotalCalc);
 var reviewButton = document.querySelector('.review-button');
 reviewButton.addEventListener('click', makeReview);
 var submitButton = document.querySelector('.review-submit-button');
