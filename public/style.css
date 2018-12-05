@@ -147,6 +147,29 @@
     display: inline-block;
 }
 
+.buy-button {
+   margin-top: 10px;
+   font-size: 20px;
+   padding-left: 15px;
+   padding-right: 15px;
+   background: lightgray;
+}
+
+.buy-name-container {
+   margin-bottom: 10px;
+   margin-top: 10px;
+   margin-right: 50px;
+}
+
+.buy-input-field {
+   margin-right: 16px;
+}
+
+.quanity-container {
+   margin-bottom: 5px;
+   margin-right: 50px;
+}
+
 .hidden {
 	display: none;
 }
