@@ -40,20 +40,49 @@ app.get('/', function (req, res, next) {
 
 app.get('/products/:product', function (req, res, next) {
     var product = req.params.product.toLowerCase();
-    if (tableData[product]){
-        res.status(200).render('productPage', tableData[product]);
-    }
-//    if (tableData[req.params.n]) {
-//        res.status(200).render('./partials/tablePhoto', [tableData[req.params.n], reviewData[req.params.n]]); // z is the template for a single listing.
-//    } 
-    else {
+    var productCollection = mongoDB.collection('products');
+    productCollection.find({ productId: product }).toArray(function (err, productDocs) {
+    if(err) {
+        res.status(500).send("Error connecting to DB");
+    } else if ( productDocs.length > 0) {
+        res.status(200).render('productPage', productDocs[0]);
+    } else {
         next();
     }
+    })
 });
+
+app.post('/people/:product/addReview', function(req, res, next) {
+    var product = req.params.product.toLowerCase();
+    
+    if(req.body && req.body.reviewName && req.body.review) {
+        var reviewObj = {
+            reviewName: req.body.reviewName,
+            review: req.body.review
+        };
+        var productCollection = mongoDB.collection('products');
+        productCollection.updateOne(
+            {productId: product},
+            {$push: { reviews: reviewObj }},
+            function (err, result) {
+                if (err) {
+                    res.status(500).send("Error submitting review data");
+                } else if (result.matchedCount > 0) {
+                    res.status(200).send("Sucess")
+                } else {
+                    next();
+                }
+            }
+        );
+    } else {
+        res.status(400).send("All fields need to be filled in.");
+    }
+})
 
 app.get('*', function (req, res, next) {
    res.status(404).render('404', {});
 });
+
 MongoClient.connect(mongoURL, function (err, client) {
     if (err){
         throw err;

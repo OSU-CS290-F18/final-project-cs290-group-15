@@ -23,13 +23,13 @@ function handleReviewSubmitClick() {
 		return false;
 	}
     else {
-       console.log("All fields filled");
-       createReview();
-       return true;
-        var postRequest = new XMLHttpRequest();
-        var requestURL = '/products/' + getProductFromURL() + '/addReview';
-        postRequest.open('POST', requestURL);
+//       console.log("All fields filled");
+        createReview();
         
+        var postRequest = new XMLHttpRequest();
+        var requestURL = '/products/' + getProductFromURL()  + '/addReview';
+        postRequest.open('POST', requestURL);
+
         var requestBody = JSON.stringify({
             reviewName: reviewName,
             review: review
@@ -38,12 +38,20 @@ function handleReviewSubmitClick() {
         postRequest.addEventListener('load', function(event) {
             if (event.target.status === 200) {
                 var reviewTemplate = Handlebars.templates.Reviews;
-                var 
+                var newreviewHTML = reviewTemplate({
+                    reviewName: reviewName,
+                    review: review
+                });
+                
+                var reviewContainer = document.querySelector('.review-container');
+                reviewContainer.insertAdjacentHTML('beforeend', newreviewHTML);
+            } else {
+                alert("Error storing data" + event.target.response);
             }
-        
-            var reviewContainer = document.querySelector('.review-container');
-            reviewContainer.insertAdjacentHTML('beforeend', );
         });
+        
+        postRequest.setRequestHeader('Content-Type', 'application/json');
+        postRequest.send(requestBody);
     }
     
 }
@@ -94,12 +102,3 @@ var submitButton = document.querySelector('.review-submit-button');
 submitButton.addEventListener('click', handleReviewSubmitClick);
 var xButton = document.querySelector('.modal-x-button');
 xButton.addEventListener('click', xButtonClick);
-
-
-/*window.addEventListener('DOMContentLoaded', function() {
-    var reviewButton = document.querySelector('.review-button');
-    reviewButton.addEventListener('click', createReview);
-    
-    var submitReviewButton = document.querySelector('.review-submit-button');
-    submitReviewButton.addEventListener('click', handleReviewSubmitClick);
-})*/
