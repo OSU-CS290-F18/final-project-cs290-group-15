@@ -12,17 +12,19 @@
     
     <div class="buy-container">
 	<button class="buy-button">Buy</button>
-	<div class="buy-modal">
+	<div id="buy-modal" class="hidden">
+	    <h3 class="modal-title">Buy This Table</h3>
 	    <div class="buy-name-container">
 		<label for="buyer-name" class="buy-input-field">Name</label>
 		<input type="text" name="buyer-name" class="buyer-input">
 	    </div>
 	    <div class="quantity-container">
 		<label for="quantity" class="buy-input-field">Quantity</label>
-		<input type="number" name="quantity" class="buyer-input"> 
+		<input type="number" name="quantity" class="buyer-input" id="quantity-input"> 
 	    </div>
 	    <div class="total-container">
 		<label for="total" class="buy-input-field">Total</label>
+        <span class="total">{{price}}</span>
 		<!--No idea how to show the total-->
 	    </div> 
 	</div>
@@ -34,7 +36,6 @@
 </div>
 <div class="review-container">
     <h3>Reviews</h3>
-    <h3 class="modal-title">Submit your own review</h3>
     <button class="review-button">Make Review</button>
     <div class="reviewModal hidden">
     <div class="modal-header">
@@ -51,10 +52,9 @@
     </div>
     <button class="review-submit-button">Submit</button>
     </div>
-    
-    {{#each reviews}}
-        <div class="reviews">
+    <div class="reviews">
+        {{#each reviews}}
             {{> Reviews}}
-        </div>
-        {{/each}}
+            {{/each}}
+    </div>
 </div>
