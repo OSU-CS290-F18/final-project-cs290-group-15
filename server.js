@@ -52,7 +52,7 @@ app.get('/products/:product', function (req, res, next) {
     })
 });
 
-app.post('/people/:product/addReview', function(req, res, next) {
+app.post('/products/:product/addReview', function(req, res, next) {
     var product = req.params.product.toLowerCase();
     
     if(req.body && req.body.reviewName && req.body.review) {
