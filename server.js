@@ -56,14 +56,14 @@ app.post('/products/:product/addReview', function(req, res, next) {
     var product = req.params.product.toLowerCase();
     
     if(req.body && req.body.reviewName && req.body.review) {
-        var reviewObj = {
-            reviewName: req.body.reviewName,
-            review: req.body.review
-        };
+//        var reviewObj = {
+//            reviewName: req.body.reviewName,
+//            review: req.body.review
+//        };
         var productCollection = mongoDB.collection('products');
         productCollection.updateOne(
             {productId: product},
-            {$push: { reviews: reviewObj }},
+            {$push: { reviews: {reviewName: req.body.reviewName, review: req.body.review}}},
             function (err, result) {
                 if (err) {
                     res.status(500).send("Error submitting review data");
