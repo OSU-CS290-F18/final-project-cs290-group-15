@@ -12,11 +12,11 @@ function handleBuyButtonClick() {
 }
 
 function handleTotalCalc() {
-    total = pricePer;
+    total = parseInt(pricePer * 100);
     console.log(total);
     total = total * (document.getElementById('quantity-input').value || 1);
     console.log(total);
-    document.querySelector('.total').textContent = total;
+    document.querySelector('.total').textContent = (total / 100).toFixed(2);
 }
 
 function handleBuyConfirmClick() {
