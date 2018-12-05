@@ -7,6 +7,7 @@
          "photoURL": "/WoodCoffeeTable1.jpg"
            }
         ],
+		"price" : "19.99",
        "reviews" : [
            {
                "reviewName" : "Billy Mays",
@@ -26,6 +27,7 @@
        	    "photoURL": "/glassCoffeeTable2.jpg"
          }
        ],
+	   "price" : "49.99",
        "reviews" : [
         {
             "reviewName": "Bob Jones",
@@ -50,6 +52,7 @@
             "photoURL": "/WoodDiningTable1.jpg"   
            }
            ],
+		"price" : "29.99",
        "reviews" : [
            {
                "reviewName" : "ILOVETABLES",
@@ -66,6 +69,7 @@
         "photoURL": "/outdoorMosiacTable.jpg"
            }
            ],
+		"price" : "79.99",
        "reviews" : [
         {
             "reviewName" : "Garden Gnome",
