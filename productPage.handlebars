@@ -1,0 +1,60 @@
+<div class="content-container">
+    
+    <h2 class="mainpage-title">{{name}}</h2>
+    
+    <div class="image-container">
+        
+	{{#each photos}}
+        {{> tablePhoto}}
+    {{/each}}
+        
+    </div><!--Until I can find a decent picture, potentially multiple pictures.-->
+    
+    <div class="buy-container">
+	<button class="buy-button">Buy</button>
+	<div id="buy-modal" class="hidden">
+	    <h3 class="modal-title">Buy This Table</h3>
+	    <div class="buy-name-container">
+		<label for="buyer-name" class="buy-input-field">Name</label>
+		<input type="text" name="buyer-name" class="buyer-input">
+	    </div>
+	    <div class="quantity-container">
+		<label for="quantity" class="buy-input-field">Quantity</label>
+		<input type="number" name="quantity" class="buyer-input" id="quantity-input"> 
+	    </div>
+	    <div class="total-container">
+		<label for="total" class="buy-input-field">Total</label>
+        <span class="total">{{price}}</span>
+		<!--No idea how to show the total-->
+	    </div> 
+	</div>
+    </div>
+    <div class="description-container">
+       <h2>Product Description</h2>
+       <p class="description">{{description}}</p>
+    </div>
+</div>
+<div class="review-container">
+    <h3>Reviews</h3>
+    <button class="review-button">Make Review</button>
+    <div class="reviewModal hidden">
+    <div class="modal-header">
+       <h3>Add your own review</h3>
+       <button class="modal-x-button">&times;</button>
+    </div>
+    <div class="new-review-name">
+	<label for="name" class="review-input-field">Name</label>
+	<input type="text" name="name" class="name-input">
+    </div>
+    <div class="new-review-review">
+	<label for="review" class="review-input-field">Review</label>
+	<input type="text" name="review" class="review-input">
+    </div>
+    <button class="review-submit-button">Submit</button>
+    </div>
+    <div class="reviews">
+        {{#each reviews}}
+            {{> Reviews}}
+            {{/each}}
+    </div>
+</div>
