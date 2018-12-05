@@ -131,7 +131,7 @@
    background: lightgray;
    text-align: center;
    border: 1px solid black;
-   padding 25px;
+   padding: 25px;
 }
 
 .product-picture {
@@ -188,7 +188,7 @@
     padding-right: 5px;
 }
 
-.reviewModal {
+.reviewModal, #buy-modal {
    position: absolute;
    top: 50%;
    left: 50%;

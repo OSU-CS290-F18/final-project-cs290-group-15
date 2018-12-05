@@ -5,7 +5,7 @@ var buyModal = document.getElementById('buy-modal');
 var pricePer = parseFloat(document.querySelector('.total').textContent);
 
 function handleBuyButtonClick() {
-    buyModal.classList.toggle("hidden");
+    buyModal.classList.remove("hidden");
 }
 
 function handleTotalCalc() {
@@ -39,7 +39,8 @@ function handleReviewSubmitClick() {
 }
 
 function xButtonClick() {
-   modal.classList.add("hidden");
+    modal.classList.add("hidden");
+    buyModal.classList.add("hidden");
 }
 
 function makeReview() {
@@ -86,8 +87,10 @@ var reviewButton = document.querySelector('.review-button');
 reviewButton.addEventListener('click', makeReview);
 var submitButton = document.querySelector('.review-submit-button');
 submitButton.addEventListener('click', handleReviewSubmitClick);
-var xButton = document.querySelector('.modal-x-button');
-xButton.addEventListener('click', xButtonClick);
+var xButtons = document.querySelectorAll('.modal-x-button');
+for (var i = 0; i < xButtons.length; i++) {
+    xButtons[i].addEventListener('click', xButtonClick);
+}
 
 
 /*window.addEventListener('DOMContentLoaded', function() {
