@@ -155,6 +155,7 @@
    background: lightgray;
    border: 2px solid black;
    border-radius: 3px;
+   cursor: pointer;
 }
 
 .buy-name-container {
@@ -201,6 +202,19 @@
    border-radius: 3px;
 }
 
+.modal-header {
+   position: relative;
+}
+
+.modal-x-button {
+   position: absolute;
+   right: 10px;
+   top: 0px;
+   border: 2px solid black;
+   border-radius: 3px;
+   cursor: pointer;
+}
+
 .review-container {
    text-align: center;
 }
@@ -214,6 +228,7 @@
    border: 2px solid black;
    border-radius: 3px;
    background: lightgray;
+   cursor: pointer;
 }
 
 .review-submit-button {
@@ -225,12 +240,13 @@
    border: 2px solid black;
    border-radius: 3px;
    background: lightgray;
+   cursor: pointer;
 }
 
 .new-review-name {
    margin-bottom: 10px;
    margin-right: 50px;
-   margin-top: 15%;
+   margin-top: 8%;
 }
 
 .new-review-review {

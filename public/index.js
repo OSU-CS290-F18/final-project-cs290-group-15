@@ -18,7 +18,6 @@ function handleReviewSubmitClick() {
     else {
        console.log("All fields filled");
        createReview();
-       clearReview();
        return true;
         //var postRequest = new XMLHttpRequest();
         //var requestURL = '/products/' '/addReview';
@@ -26,6 +25,9 @@ function handleReviewSubmitClick() {
     
 }
 
+function xButtonClick() {
+   modal.classList.add("hidden");
+}
 
 function makeReview() {
         modal.classList.remove("hidden");
@@ -66,7 +68,9 @@ function createReview() {
 var reviewButton = document.querySelector('.review-button');
 reviewButton.addEventListener('click', makeReview);
 var submitButton = document.querySelector('.review-submit-button');
-submitButton.addEventListener('click', createReview);
+submitButton.addEventListener('click', handleReviewSubmitClick);
+var xButton = document.querySelector('.modal-x-button');
+xButton.addEventListener('click', xButtonClick);
 
 
 /*window.addEventListener('DOMContentLoaded', function() {
