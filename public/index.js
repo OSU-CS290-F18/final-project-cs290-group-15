@@ -57,8 +57,8 @@ function handleReviewSubmitClick() {
         postRequest.open('POST', requestURL);
 
         var requestBody = JSON.stringify({
-            reviewName: reviewName,
-            review: review
+            reviewName: reviewName.value,
+            review: review.value
         });
         
         postRequest.addEventListener('load', function(event) {
