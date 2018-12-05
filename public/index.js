@@ -39,8 +39,6 @@ function handleBuyConfirmClick() {
 }
 
 function handleReviewSubmitClick() {
-    var reviewName = document.getElementsByClassName('name-input').value.trim();
-    var review = document.getElementsByClassName('review-input').value.trim();
     
 	if(!reviewName.value === ""){
 		alert("Empty name!");
