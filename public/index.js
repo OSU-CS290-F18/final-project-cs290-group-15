@@ -4,14 +4,14 @@ var modal = document.querySelector('.reviewModal');
 
 
 function handleReviewSubmitClick() {
-    //var reviewName = document.querySelector('.name-input').value.trim();
-    //var review = document.querySelector('.review-input').value.trim();
+    var reviewName = document.getElementsByClassName('name-input').value.trim();
+    var review = document.getElementsByClassName('review-input').value.trim();
     
-	if(!reviewName.value){
+	if(!reviewName.value === ""){
 		alert("Empty name!");
 		return false;
 	}
-	if(!review.value){
+	if(!review.value === ""){
 		alert("No review!");
 		return false;
 	}
