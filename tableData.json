@@ -1,5 +1,6 @@
+[
 {
-   "woodcoffee": {
+       "productId": "woodcoffee", 
        "name" : "Wood Coffee Table",
        "description": "This wooden coffee table looks good in any room, the living room, the family room or even a game room. It comes with two layers for extra space to store things like the remotes or display decorational pieces.",
        "photos" : [
@@ -15,8 +16,8 @@
            }
        ]
    },
-
-   "glasscoffee": {
+{
+    "productId": "glasscoffee",
        "name" : "Glass Coffee Table",
        "description": "This coffee table looks good in any room, the living room, the family room or even a game room. It comes with two layers for extra space to store things like the remotes or display decorational pieces.",
        "photos" : [
@@ -43,8 +44,8 @@
         }
     ]
    },
-
-   "dining": {
+{
+   "productId": "dining",
        "name" : "Wooden Dining Table",
        "description" : "This beautiful wooden dining table is perfect for any home and provides a warm welcoming setting to have family meals.",
        "photos" : [
@@ -60,8 +61,8 @@
            }
        ]
    },
-
-   "outdoor": {
+{
+   "productId": "outdoor",
        "name" : "Outdoor Mosiac Table",
        "description" : "This outdoor table has been hand crafted to be functional as well as decorational. It will look amazing by your lawn, on your deck, in the garden or wherever you choose to place it.",
        "photos" : [
@@ -77,4 +78,4 @@
         }
     ]
    }
-}
+]
