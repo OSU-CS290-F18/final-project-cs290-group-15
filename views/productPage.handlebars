@@ -13,6 +13,7 @@
     <div class="buy-container">
 	<button class="buy-button">Buy</button>
 	<div class="buy-modal">
+	    <h3 class="modal-title">Submit your own review</h3>
 	    <div class="buy-name-container">
 		<label for="buyer-name" class="buy-input-field">Name</label>
 		<input type="text" name="buyer-name" class="buyer-input">
@@ -35,7 +36,7 @@
 <div class="review-container">
     <h3>Reviews</h3>
     <button class="review-button">Make Review</button>
-    <div class="reviewModal">
+    <div class="reviewModal hidden">
     <div class="new-review-name">
 	<label for="name" class="review-input-field">Name</label>
 	<input type="text" name="name" class="name-input">
@@ -46,6 +47,7 @@
     </div>
     <button class="review-submit-button">Submit</button>
     </div>
+    
     {{#each reviews}}
         <div class="reviews">
             {{> Reviews}}

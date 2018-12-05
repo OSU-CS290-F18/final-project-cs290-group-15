@@ -1,31 +1,42 @@
+var reviewName = document.querySelector('.name-input');
+var review = document.querySelector('.review-input');
+var modal = document.querySelector('.reviewModal');
+
+
 function handleReviewSubmitClick() {
-    var reviewName = document.getElementById('name-input').value.trim();
-    var review = document.getElementById('review-input').value.trim();
+    //var reviewName = document.querySelector('.name-input').value.trim();
+    //var review = document.querySelector('.review-input').value.trim();
     
-	if(!nameInput.value){
+	if(!reviewName.value){
 		alert("Empty name!");
 		return false;
 	}
-	if(!reviewInput.value){
+	if(!review.value){
 		alert("No review!");
 		return false;
 	}
     else {
-        var postRequest = new XMLHttpRequest();
-        var requestURL = '/products/' '/addReview';
+       console.log("All fields filled");
+       createReview();
+       clearReview();
+       return true;
+        //var postRequest = new XMLHttpRequest();
+        //var requestURL = '/products/' '/addReview';
     }
     
 }
 
 
-function clearReview() {
-	nameInput.value = "";
-	reviewInput.value = "";
+function makeReview() {
+        modal.classList.remove("hidden");
+	reviewName.value = "";
+	review.value = "";
+	console.log("The inputs were cleared");
 }
 
 function createReview() {
-
-	var parentSection = document.getElementByClassName('review-container');
+        
+	var parentSection = document.querySelector('.review-container');
 
 	var newReview = document.createElement('div');
 	newReview.classList.add('reviews');
@@ -36,28 +47,32 @@ function createReview() {
 	newReview.append(newReviewHeader);
 
 	var name = document.createElement('p');
-	name.textContent = nameInput.value;
+	name.textContent = reviewName.value;
 	newReviewHeader.append(name);
 	
 	var newReviewBody = document.createElement('div');
 	newReviewBody.classList.add('review-body');
 	newReview.append(newReviewBody);
 
-	var review = document.createElement('p');
-	review.textContent = reviewInput.value;
-	newReviewBody.append(review);
-
-	clearReview();
+	var newReviewContent = document.createElement('p');
+	newReviewContent.textContent = review.value;
+	console.log("review content is:", review.value);
+	newReviewBody.append(newReviewContent);
+        
+        modal.classList.add("hidden");	
+	//clearReview();
 }
 
-var reviewButton = document.getElementByClassName('review-button');
-reviewButton.addEventListener('click', clearReview);
+var reviewButton = document.querySelector('.review-button');
+reviewButton.addEventListener('click', makeReview);
+var submitButton = document.querySelector('.review-submit-button');
+submitButton.addEventListener('click', createReview);
 
 
-window.addEventListener('DOMContentLoaded', function() {
-    var reviewButton = document.getElementById('review-button');
+/*window.addEventListener('DOMContentLoaded', function() {
+    var reviewButton = document.querySelector('.review-button');
     reviewButton.addEventListener('click', createReview);
     
-    var submitReviewButton = document.getElementById('review-submit-button');
+    var submitReviewButton = document.querySelector('.review-submit-button');
     submitReviewButton.addEventListener('click', handleReviewSubmitClick);
-})
+})*/
