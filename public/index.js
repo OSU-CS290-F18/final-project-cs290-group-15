@@ -1,5 +1,8 @@
 var reviewName = document.querySelector('.name-input');
 var review = document.querySelector('.review-input');
+var buyName = document.querySelector('.buyer-input');
+var buyQuantity = document.getElementById('quantity-input');
+
 var modal = document.querySelector('.reviewModal');
 var buyModal = document.getElementById('buy-modal');
 var pricePer = parseFloat(document.querySelector('.total').textContent);
@@ -39,6 +42,13 @@ function handleReviewSubmitClick() {
 }
 
 function xButtonClick() {
+    reviewName.value = "";
+    review.value = "";
+    
+    buyName.value = "";
+    buyQuantity.value = "";
+    document.querySelector('.total').textContent = pricePer;
+
     modal.classList.add("hidden");
     buyModal.classList.add("hidden");
 }
