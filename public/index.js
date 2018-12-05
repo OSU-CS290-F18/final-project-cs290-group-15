@@ -1,13 +1,7 @@
-var nameInput = document.getElementByClassName('name-input');
-var reviewInput = document.getElementByClassName('review-input');
-
-
-function clearReview() {
-	nameInput.value = "";
-	reviewInput.value = "";
-}
-
-function createReview() {
+function handleReviewSubmitClick() {
+    var reviewName = document.getElementById('name-input').value.trim();
+    var review = document.getElementById('review-input').value.trim();
+    
 	if(!nameInput.value){
 		alert("Empty name!");
 		return false;
@@ -16,6 +10,20 @@ function createReview() {
 		alert("No review!");
 		return false;
 	}
+    else {
+        var postRequest = new XMLHttpRequest();
+        var requestURL = '/products/' '/addReview';
+    }
+    
+}
+
+
+function clearReview() {
+	nameInput.value = "";
+	reviewInput.value = "";
+}
+
+function createReview() {
 
 	var parentSection = document.getElementByClassName('review-container');
 
@@ -44,3 +52,12 @@ function createReview() {
 
 var reviewButton = document.getElementByClassName('review-button');
 reviewButton.addEventListener('click', clearReview);
+
+
+window.addEventListener('DOMContentLoaded', function() {
+    var reviewButton = document.getElementById('review-button');
+    reviewButton.addEventListener('click', createReview);
+    
+    var submitReviewButton = document.getElementById('review-submit-button');
+    submitReviewButton.addEventListener('click', handleReviewSubmitClick);
+})

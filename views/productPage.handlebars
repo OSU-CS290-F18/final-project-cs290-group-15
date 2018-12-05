@@ -35,6 +35,7 @@
 <div class="review-container">
     <h3>Reviews</h3>
     <button class="review-button">Make Review</button>
+    <div class="reviewModal">
     <div class="new-review-name">
 	<label for="name" class="review-input-field">Name</label>
 	<input type="text" name="name" class="name-input">
@@ -42,6 +43,8 @@
     <div class="new-review-review">
 	<label for="review" class="review-input-field">Review</label>
 	<input type="text" name="review" class="review-input">
+    </div>
+    <button class="review-submit-button">Submit</button>
     </div>
     {{#each reviews}}
         <div class="reviews">
